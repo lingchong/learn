@@ -1,0 +1,28 @@
+元注解：
+  注解生命周期：
+  @Retention(...):
+  RetentionPolicy.SOURCE
+  RetentionPolicy.CLASS
+  RetentionPolicy.RUNTIME
+  
+  作用目标：
+    @Target(ElementType.TYPE) 类，接口，枚举
+	 ElementType.METHOD
+	 ElementType.FILED
+	 ElementType.CONSTRUCTOR
+	 ELementType.LOCAL_VARIABLE
+   注解包含在javadoc中
+    @Documented
+	被集成
+	@Inherited
+	可重复注解
+	@Repeatable
+ 
+ JDK标准注解：
+ @Override
+ @Deprecated
+ @SupperWarnings
+  注解只有成员变量，没有方法
+  
+  
+  https://blog.csdn.net/qq_36962144/article/details/81369916

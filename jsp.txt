@@ -1,0 +1,127 @@
+jsp
+session:
+ session.invalidate()；清除session ,session失效
+ session.removeAttribute("uname") 
+ cookie不是一个对象
+ 
+ application全局对象
+ String getContextPath // 项目的虚拟路径
+String getRealPath 绝对路径
+可以配很多虚拟路径
+cookie不是一个内置对象
+<Host appBase = “D：\study\JspProject" name ="www.test.com">
+  <Context docbase = "D:study\JspProject" path="/"/>
+....
+</Host>
+JDBC:Java DataBase Connectivity:
+为多种关系型数据库（DBMS) 提供统一的访问方式
+
+java程序   通过jdbc 操作JDBC DriverManager();
+JDBC API:提供了各种操作访问接口 ：Connect Statement PrepareStatement
+ResultSet
+主要功能：
+DriverManager:管理jdbc驱动
+Connection:连接、操作数据库
+Statement:查询语句
+CallableStatement:调用数据库中的存储过程/存储函数
+Result:访问结果集
+
+3.具体步骤
+1.导入驱动程序
+2.建立连接
+3.发送SQL
+4.处理结果集（查询）
+5.
+
+
+jsp访问数据库：
+import = "java.sql.*"
+
+spring mvc设计模式：
+M： Model 
+V:View
+C:Controller
+  
+  
+  Servlet:java类必须符合一定的规范
+   1.必须继承javax.servlet.http.HttpServlet
+   2.重写其中的doGet()或者doPost()方法
+   Servlet要想使用：必须配置
+   项目根目录：
+   webcontent
+  <a href="welcomeServlet">  所在的jsp实在webcontent下，因此
+  是在项目根目录下请求welcometServlet
+   
+   Servlet2.5:web.xml 
+   <servlet>
+     <servlet-name></servelt-name>
+     <servlet-class></servlet-class>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name></servelt-name>
+	  <url-pattern></url-pattern>
+   </servlet-mapping>
+Servlet3.0：   @WebServlet
+
+
+node.js模块引用：
+count.js
+function arr(array){
+  console.log("there is "+array.length +"character");
+  // return `the sum of the 2 number is ${a+b}`; es6写法
+}
+module.exports = counter
+
+app.js
+ var counter =  require("./count");
+console.log(counter("helo"));
+apache dubbo:
+
+时间触发：
+var event = require("event");
+var myEmitter = new event.EventEmitter();
+//定义一个事件对象
+myEmitter = new event.EventEmitter();
+//定义事件的触发方法
+myEmitter.on('someEvent',function(message){
+   console.log(message);
+   });
+//触发事件
+myEmitter.emit("someevent","the event was emitter");
+
+ 
+   
+
+分布式dubbo服务框架
+
+灰度发布：
+如果实现某个服务有100台服务器，
+我们想测试某个服务的改进版，先在20台服务器上部署
+新项目，可以修改路由规则，一部分访问部署新项目的20台服务器
+，另一部分访问剩下的80台服务器，等20台服务访问稳定后，在全部升级
+
+   
+   
+   
+
+
+
+
+
+
+
+
+JDBC DriverManager:管理不同的数据库驱动
+各种数据库驱动：相应的数据库厂商提供的额
+连接、操作数据库
+
+
+驱动程序       mysql驱动程序（jar包）
+
+oracle数据库   mysql数据库
+
+
+
+
+  
+ 

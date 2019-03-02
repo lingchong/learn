@@ -6,7 +6,8 @@ git init
 git add .
 git config --global user.email 2713318799@qq.com
 git config --global user.name lingchong
-git commit -m "init"
+git commit -m "init"(必须先配置才能commit)
+git remote add origin https://github.com/lingchong/test.git
 git remote -v(查看远程信息）
 git push -u  origin master
 

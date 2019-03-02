@@ -1,0 +1,11 @@
+var fs = require('fs');
+var readMe = fs.readFileSync("readMe.txt","utf-8");
+var readMe2 = fs.readFile("readMe.txt","urf-8",function(data){
+      console.log(data);
+	  fs.writeFile("writeme.txt",'urf-8',function(){
+	  console.log("write has finished");
+	  })
+	});
+console.log(readMe);
+fs.writeFileSync("writeme.txt",readMe);
+fs.writeFileSync("writeme.txt","hello");

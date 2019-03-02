@@ -1,0 +1,28 @@
+//All stream are instance of EventEmitter. 
+//const stream =  require('stream');
+var fs = require('fs');
+var myReadStream = fs.createReadStream(_dirname + '/readMe.txt',"utf-8");
+var myWriteStream = fs.createWriteStream(_dirname,'/writeMe.txt');
+myReadStream.pipe(myWriteStream);
+
+
+var writeData = "hello world";
+myWriteStream.write(writeData);
+myWriteStream.end();
+myWriteStream.on('finish',function(){
+    console.log('finish');
+	});
+
+
+myeadStream.setEncoding("utf8");
+var data = "";
+myReadStream.on('data',function(chunk){
+  console.log('new chunk received');
+  console.log(chunk);
+  //data+= chunk;
+  myWriteStream.write(chunk);
+  });
+  
+  myReadStream.on('end',function(){
+     console.log(data);
+	 });

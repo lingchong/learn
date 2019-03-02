@@ -1,0 +1,21 @@
+var fs = require('fs');
+fs.unlink('writeMe.txt',function(){
+ console.log("delete writeMe.txt");
+ });
+ //fs.unlinkSync 同步同上
+ 
+fs.mkdirSync('stuff');
+fs.rmdirSync（’stuff');
+
+fs.mkdir('hello',function(){
+    fs.readFile("readMe.txt",'utf-8',function(err,data){
+	  fs.writeFile('./hello/writeMe.txt',function(){
+	    console.log("copy successfully");
+	  })
+	});
+});
+
+
+
+fs.mkdir('stuff',function(){
+  fs.readFile('readMe.txt','utf-8',functo

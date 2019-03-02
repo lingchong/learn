@@ -1,0 +1,7 @@
+工具小计：
+npm config list 查看npm常用配置
+查看node安装的包：
+npm list -g --depth 0
+npm ls jqery//查看本地安装的jQery,如果没有则显示 empty
+npm ls jquery -g 查看全局安装的jqery
+

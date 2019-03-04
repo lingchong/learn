@@ -1,0 +1,14 @@
+大数据分页查询方法：
+select * from tablename limit  m,n
+全表扫描，速度慢，结果集不稳定
+从结果集的M位置取出N条数据，其余抛弃
+、2.建立主键或者索引，利用索引
+select *from table where id_pk > (pageNum * 10) limit m
+
+基于索引在排序
+select * from tableName where id_pk > (pageNum * 10) 
+ordder by id_pk asc limit M
+
+基于索引使用prepare （第一个问号表示pageNum,第二个表示每页元数组）
+PREPARE stmt_name FROM SELECT * FROM 表名称 WHERE id_pk > (？* ？) ORDER BY id_pk ASC LIMIT M
+https://www.cnblogs.com/geningchao/p/6649907.html
